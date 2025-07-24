@@ -1,19 +1,71 @@
 <!doctype html>
-<html lang="en">
+<html lang="ja">
   <head>
     <meta charset="UTF-8" />
-    <title>Document</title>
+    <title>スキル成長比較</title>
+
+<style>
+  body {
+    padding: 32px;
+    text-align: center;
+    background-color: #f9fafb;
+  }
+
+  h2 {
+    margin-bottom: 24px;
+    color: #1f2937;
+  }
+
+  canvas {
+    max-width: 600px;
+    margin: auto;
+  }
+
+  button {
+    margin: 16px 8px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    background-color: #3b82f6;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  button:hover{
+    color: #fff; 
+    background-color: #1e40af; 
+    text-decoration: none;   
+}
+
+  .chart-container {
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+  }
+
+  #now {
+    display: none;
+  }
+</style>
+
+    </style>
   </head>
+
   <body>
-    <h1>ある学校の定期試験の平均点</h1>
-    <div>
-      <div style="width: 1000px"><canvas id="school"></canvas></div>
+    <h2>スキルの成長比較（大学1回生 → 現在）</h2>
+
+    <div class="chart-container">
+      <canvas id="year1"></canvas>
+      <canvas id="now"></canvas>
     </div>
 
-    <!-- <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> -->
+    <div>
+      <button id="button1" class="active">大学1回生</button>
+      <button id="button2">現在</button>
+    </div>
 
-    <script></script>
-
-    <script src="app.js"></script>
+    <script src="app.js" type="module"></script>
   </body>
 </html>
